@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://rajuu8.github.io/ToolsWala/">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://rajuu8.github.io/ToolsWala/">
-  <!-- Google Analytics -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HME5561QR"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -59,6 +59,19 @@ hr{border:none;border-top:1px solid var(--border);margin:8px 0;}
 .stitle{font-family:'Syne',sans-serif;font-weight:700;font-size:1.5rem;margin-bottom:4px;letter-spacing:-0.5px;}
 .ssub{color:var(--muted);font-size:0.88rem;margin-bottom:24px;}
 
+/* NEW THIS WEEK */
+.new-week{background:linear-gradient(135deg,rgba(108,99,255,0.08),rgba(255,107,107,0.05));border:1px solid rgba(108,99,255,0.2);border-radius:20px;padding:32px;margin:40px 0;}
+.new-week-header{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.new-badge{background:rgba(67,233,123,0.15);border:1px solid rgba(67,233,123,0.3);color:#43e97b;padding:4px 12px;border-radius:999px;font-size:0.72rem;font-weight:700;letter-spacing:0.5px;}
+.new-week-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1.2rem;}
+.new-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;}
+.new-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;display:flex;align-items:center;gap:12px;transition:all 0.2s;}
+.new-card:hover{border-color:rgba(108,99,255,0.3);transform:translateY(-2px);}
+.new-icon{font-size:1.6rem;flex-shrink:0;}
+.new-name{font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;margin-bottom:2px;}
+.new-desc{font-size:0.75rem;color:var(--muted);}
+.new-tag{font-size:0.65rem;padding:2px 7px;border-radius:999px;font-weight:600;background:rgba(67,233,123,0.12);color:#43e97b;border:1px solid rgba(67,233,123,0.2);margin-top:4px;display:inline-block;}
+
 .cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin:24px 0;}
 .cat{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 10px;text-align:center;cursor:pointer;transition:all 0.2s;color:var(--text);}
 .cat:hover,.cat.on{background:#1c1c2e;border-color:rgba(108,99,255,0.4);transform:translateY(-2px);}
@@ -91,6 +104,22 @@ hr{border:none;border-top:1px solid var(--border);margin:8px 0;}
 .visit:hover{background:rgba(108,99,255,0.2);}
 .nores{text-align:center;color:var(--muted);padding:48px;display:none;}
 
+/* SUBMIT FORM */
+.submit-section{background:var(--surface);border:1px solid rgba(108,99,255,0.2);border-radius:20px;padding:40px;margin:40px 0;}
+.submit-title{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;margin-bottom:8px;letter-spacing:-0.5px;}
+.submit-sub{color:var(--muted);font-size:0.9rem;margin-bottom:28px;line-height:1.6;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.form-group{display:flex;flex-direction:column;gap:6px;}
+.form-group.full{grid-column:1/-1;}
+.form-group label{font-size:0.82rem;font-weight:500;color:var(--muted);}
+.form-group input,.form-group select,.form-group textarea{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:11px 14px;border-radius:10px;font-size:0.88rem;font-family:'DM Sans',sans-serif;outline:none;transition:border-color 0.2s;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:rgba(108,99,255,0.5);}
+.form-group select option{background:#13131a;}
+.form-group textarea{resize:vertical;min-height:90px;}
+.btn-submit{background:var(--accent);color:white;border:none;padding:13px 32px;border-radius:10px;font-size:0.95rem;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:8px;transition:opacity 0.2s;}
+.btn-submit:hover{opacity:0.85;}
+.submit-success{display:none;background:rgba(67,233,123,0.1);border:1px solid rgba(67,233,123,0.3);border-radius:12px;padding:16px 20px;color:#43e97b;font-size:0.9rem;margin-top:16px;}
+
 .about{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:40px;margin:40px 0;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;}
 .about-title{font-family:'Syne',sans-serif;font-weight:800;font-size:1.6rem;margin-bottom:12px;letter-spacing:-0.5px;}
 .about-text{color:var(--muted);font-size:0.9rem;line-height:1.8;margin-bottom:16px;}
@@ -117,12 +146,15 @@ footer{border-top:1px solid var(--border);padding:28px 2rem;text-align:center;co
 
 @media(max-width:768px){
   .about{grid-template-columns:1fr;}
+  .form-grid{grid-template-columns:1fr;}
+  .form-group.full{grid-column:1;}
   .hero{padding:60px 1.2rem 40px;}
   .sbox{flex-direction:column;}
   .stats{gap:16px;}
   .nav-links{display:none;}
   .nl{padding:28px 16px;}
   .nlform{flex-direction:column;}
+  .new-grid{grid-template-columns:1fr;}
 }
 .hidden{display:none!important;}
 </style>
@@ -134,10 +166,11 @@ footer{border-top:1px solid var(--border);padding:28px 2rem;text-align:center;co
   <ul class="nav-links">
     <li><a href="#tools">Tools</a></li>
     <li><a href="#categories">Categories</a></li>
+    <li><a href="#submit">Tool Submit</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#newsletter">Newsletter</a></li>
   </ul>
-  <button class="nav-cta">Free Mein Join Karo</button>
+  <button class="nav-cta" onclick="document.getElementById('submit').scrollIntoView()">Tool Submit Karo</button>
 </nav>
 
 <section class="hero">
@@ -157,7 +190,52 @@ footer{border-top:1px solid var(--border);padding:28px 2rem;text-align:center;co
 
 <div class="wrap"><hr></div>
 
-<div class="wrap" style="padding-top:48px" id="categories">
+<!-- NEW THIS WEEK -->
+<div class="wrap" style="padding-top:40px">
+  <div class="new-week">
+    <div class="new-week-header">
+      <span class="new-badge">✨ NEW</span>
+      <div class="new-week-title">Is Hafte Ke Naye Tools</div>
+    </div>
+    <div class="new-grid">
+      <div class="new-card">
+        <div class="new-icon">🎵</div>
+        <div>
+          <div class="new-name">Suno AI</div>
+          <div class="new-desc">Text se poora gaana banao — free!</div>
+          <span class="new-tag">Audio</span>
+        </div>
+      </div>
+      <div class="new-card">
+        <div class="new-icon">🔍</div>
+        <div>
+          <div class="new-name">Perplexity AI</div>
+          <div class="new-desc">Google se better research tool</div>
+          <span class="new-tag">Research</span>
+        </div>
+      </div>
+      <div class="new-card">
+        <div class="new-icon">🚀</div>
+        <div>
+          <div class="new-name">Codeium</div>
+          <div class="new-desc">Free GitHub Copilot alternative</div>
+          <span class="new-tag">Coding</span>
+        </div>
+      </div>
+      <div class="new-card">
+        <div class="new-icon">📄</div>
+        <div>
+          <div class="new-name">ChatPDF</div>
+          <div class="new-desc">PDF se directly questions pucho</div>
+          <span class="new-tag">Productivity</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<div class="wrap" id="categories">
   <div class="stitle">Categories</div>
   <div class="ssub">Apni zaroorat ke hisaab se category chunlo</div>
   <div class="cats">
@@ -221,7 +299,7 @@ footer{border-top:1px solid var(--border);padding:28px 2rem;text-align:center;co
 
     <div class="card" data-cat="audio" data-price="freemium" data-q="elevenlabs voice text to speech audio ai hindi"><div class="ctop"><div class="cicon" style="background:rgba(108,99,255,0.1)">🎤</div><div><div class="cname">ElevenLabs</div><div class="ccat">AI Voice Generator</div></div></div><div class="badges"><span class="b bfm">Freemium</span><span class="b bh">🔥 Best Voice AI</span></div><div class="cdesc">Text se bilkul real insaan jaisi awaaz banao — Hindi mein bhi. Audiobooks, YouTube voiceovers, podcasts ke liye. 10,000 characters free/month.</div><div class="cfoot"><div class="rating">⭐ 4.8 <span>(verified)</span></div><a href="https://elevenlabs.io" target="_blank" class="visit">Visit →</a></div></div>
 
-    <div class="card" data-cat="audio" data-price="freemium" data-q="otter ai transcription meeting notes audio free"><div class="ctop"><div class="cicon" style="background:rgba(67,233,123,0.1)">📝</div><div><div class="cname">Otter.ai</div><div class="ccat">Audio Transcription</div></div></div><div class="badges"><span class="b bfm">Freemium</span></div><div class="cdesc">Meeting ya lecture record karo — AI automatically transcript bana deta hai. Students ke liye class notes banane ka best tool. 300 min/month free milta hai.</div><div class="cfoot"><div class="rating">⭐ 4.5 <span>(verified)</span></div><a href="https://otter.ai" target="_blank" class="visit">Visit →</a></div></div>
+    <div class="card" data-cat="audio" data-price="freemium" data-q="otter ai transcription meeting notes audio free"><div class="ctop"><div class="cicon" style="background:rgba(67,233,123,0.1)">📝</div><div><div class="cname">Otter.ai</div><div class="ccat">Audio Transcription</div></div></div><div class="badges"><span class="b bfm">Freemium</span></div><div class="cdesc">Meeting ya lecture record karo — AI automatically transcript bana deta hai. Students ke liye class notes banane ka best tool. 300 min/month free.</div><div class="cfoot"><div class="rating">⭐ 4.5 <span>(verified)</span></div><a href="https://otter.ai" target="_blank" class="visit">Visit →</a></div></div>
 
     <div class="card" data-cat="audio" data-price="freemium" data-q="suno music ai generate song free create"><div class="ctop"><div class="cicon" style="background:rgba(255,107,107,0.1)">🎵</div><div><div class="cname">Suno AI</div><div class="ccat">AI Music Generator</div></div></div><div class="badges"><span class="b bfm">Freemium</span><span class="b bh">✨ Viral</span></div><div class="cdesc">Text likho — poora gaana ban jaata hai, vocals ke saath! Kisi bhi genre mein. Content creators ke liye background music banane ka best free tool.</div><div class="cfoot"><div class="rating">⭐ 4.6 <span>(verified)</span></div><a href="https://suno.com" target="_blank" class="visit">Visit →</a></div></div>
 
@@ -229,27 +307,81 @@ footer{border-top:1px solid var(--border);padding:28px 2rem;text-align:center;co
 
     <div class="card" data-cat="marketing" data-price="free" data-q="mailchimp email marketing newsletter free small business"><div class="ctop"><div class="cicon" style="background:rgba(249,202,36,0.1)">📧</div><div><div class="cname">Mailchimp</div><div class="ccat">Email Marketing</div></div></div><div class="badges"><span class="b bf">Free</span></div><div class="cdesc">500 subscribers tak free email marketing. AI se subject lines suggest karta hai. Small businesses ke liye newsletter shuru karne ka best tool.</div><div class="cfoot"><div class="rating">⭐ 4.4 <span>(verified)</span></div><a href="https://mailchimp.com" target="_blank" class="visit">Visit →</a></div></div>
 
-    <div class="card" data-cat="marketing" data-price="freemium" data-q="buffer social media schedule post instagram twitter linkedin"><div class="ctop"><div class="cicon" style="background:rgba(67,233,123,0.1)">📅</div><div><div class="cname">Buffer</div><div class="ccat">Social Media Scheduler</div></div></div><div class="badges"><span class="b bfm">Freemium</span></div><div class="cdesc">Instagram, Twitter, LinkedIn pe posts schedule karo — sab ek jagah se. AI se best posting time bhi suggest karta hai. 3 channels free mein milte hain.</div><div class="cfoot"><div class="rating">⭐ 4.4 <span>(verified)</span></div><a href="https://buffer.com" target="_blank" class="visit">Visit →</a></div></div>
+    <div class="card" data-cat="marketing" data-price="freemium" data-q="buffer social media schedule post instagram twitter"><div class="ctop"><div class="cicon" style="background:rgba(67,233,123,0.1)">📅</div><div><div class="cname">Buffer</div><div class="ccat">Social Media Scheduler</div></div></div><div class="badges"><span class="b bfm">Freemium</span></div><div class="cdesc">Instagram, Twitter, LinkedIn pe posts schedule karo — sab ek jagah se. AI se best posting time bhi suggest karta hai. 3 channels free mein.</div><div class="cfoot"><div class="rating">⭐ 4.4 <span>(verified)</span></div><a href="https://buffer.com" target="_blank" class="visit">Visit →</a></div></div>
 
     <div class="card" data-cat="education" data-price="free" data-q="khan academy ai tutor maths science free students"><div class="ctop"><div class="cicon" style="background:rgba(67,233,123,0.1)">📚</div><div><div class="cname">Khan Academy</div><div class="ccat">AI Tutor</div></div></div><div class="badges"><span class="b bf">Free</span><span class="b bh">🎓 Students</span></div><div class="cdesc">Maths, Science, History — AI tutor se apne pace pe sikho. School aur college students ke liye India mein sabse useful education tool. Bilkul free.</div><div class="cfoot"><div class="rating">⭐ 4.8 <span>(verified)</span></div><a href="https://khanacademy.org" target="_blank" class="visit">Visit →</a></div></div>
 
     <div class="card" data-cat="education" data-price="freemium" data-q="quizlet flashcard study ai learning exam preparation"><div class="ctop"><div class="cicon" style="background:rgba(108,99,255,0.1)">🃏</div><div><div class="cname">Quizlet AI</div><div class="ccat">Study & Flashcards</div></div></div><div class="badges"><span class="b bfm">Freemium</span></div><div class="cdesc">Notes se automatically flashcards aur quizzes ban jaate hain. Exam preparation ke liye best. 10 crore+ students worldwide use karte hain.</div><div class="cfoot"><div class="rating">⭐ 4.6 <span>(verified)</span></div><a href="https://quizlet.com" target="_blank" class="visit">Visit →</a></div></div>
 
-    <div class="card" data-cat="education" data-price="free" data-q="photomath maths solve camera free school app"><div class="ctop"><div class="cicon" style="background:rgba(255,107,107,0.1)">📷</div><div><div class="cname">Photomath</div><div class="ccat">Maths Solver</div></div></div><div class="badges"><span class="b bf">Free</span><span class="b bh">📱 App</span></div><div class="cdesc">Camera se maths ka sawaal photo lo — step by step solution milta hai. School students ke beech sabse popular app. Bilkul free, koi ads nahi.</div><div class="cfoot"><div class="rating">⭐ 4.7 <span>(verified)</span></div><a href="https://photomath.com" target="_blank" class="visit">Visit →</a></div></div>
+    <div class="card" data-cat="education" data-price="free" data-q="photomath maths solve camera free school app"><div class="ctop"><div class="cicon" style="background:rgba(255,107,107,0.1)">📷</div><div><div class="cname">Photomath</div><div class="ccat">Maths Solver</div></div></div><div class="badges"><span class="b bf">Free</span><span class="b bh">📱 App</span></div><div class="cdesc">Camera se maths ka sawaal photo lo — step by step solution milta hai. School students ke beech sabse popular app. Bilkul free.</div><div class="cfoot"><div class="rating">⭐ 4.7 <span>(verified)</span></div><a href="https://photomath.com" target="_blank" class="visit">Visit →</a></div></div>
 
     <div class="card" data-cat="productivity" data-price="freemium" data-q="todoist task management productivity ai deadline"><div class="ctop"><div class="cicon" style="background:rgba(255,107,107,0.1)">✅</div><div><div class="cname">Todoist AI</div><div class="ccat">Task Management</div></div></div><div class="badges"><span class="b bfm">Freemium</span></div><div class="cdesc">Tasks aur deadlines manage karo AI ke saath. Natural language mein likho — automatically schedule ho jaata hai. Students aur freelancers ke liye best.</div><div class="cfoot"><div class="rating">⭐ 4.5 <span>(verified)</span></div><a href="https://todoist.com" target="_blank" class="visit">Visit →</a></div></div>
 
     <div class="card" data-cat="productivity" data-price="free" data-q="chatpdf pdf summarize document free research"><div class="ctop"><div class="cicon" style="background:rgba(249,202,36,0.1)">📄</div><div><div class="cname">ChatPDF</div><div class="ccat">PDF Summarizer</div></div></div><div class="badges"><span class="b bf">Free</span><span class="b bh">📚 Students</span></div><div class="cdesc">Bada PDF upload karo — AI se questions pucho. Research papers, textbooks, legal documents — sab ka summary seconds mein. Bilkul free.</div><div class="cfoot"><div class="rating">⭐ 4.6 <span>(verified)</span></div><a href="https://chatpdf.com" target="_blank" class="visit">Visit →</a></div></div>
 
-    <div class="card" data-cat="productivity" data-price="freemium" data-q="merlin ai browser extension chrome free youtube"><div class="ctop"><div class="cicon" style="background:rgba(67,233,123,0.1)">🧩</div><div><div class="cname">Merlin AI</div><div class="ccat">Browser Extension</div></div></div><div class="badges"><span class="b bfm">Freemium</span></div><div class="cdesc">Chrome extension — kisi bhi website pe AI use karo. YouTube video summarize karo, emails likhwao, Google results explain karwao. Bohot useful.</div><div class="cfoot"><div class="rating">⭐ 4.5 <span>(verified)</span></div><a href="https://merlin.foyer.work" target="_blank" class="visit">Visit →</a></div></div>
+    <div class="card" data-cat="productivity" data-price="freemium" data-q="merlin ai browser extension chrome free youtube"><div class="ctop"><div class="cicon" style="background:rgba(67,233,123,0.1)">🧩</div><div><div class="cname">Merlin AI</div><div class="ccat">Browser Extension</div></div></div><div class="badges"><span class="b bfm">Freemium</span></div><div class="cdesc">Chrome extension — kisi bhi website pe AI use karo. YouTube video summarize karo, emails likhwao, Google results explain karwao.</div><div class="cfoot"><div class="rating">⭐ 4.5 <span>(verified)</span></div><a href="https://merlin.foyer.work" target="_blank" class="visit">Visit →</a></div></div>
 
-    <div class="card" data-cat="productivity" data-price="free" data-q="beautiful ai slides deck presentation free simple"><div class="ctop"><div class="cicon" style="background:rgba(108,99,255,0.1)">🗂️</div><div><div class="cname">Beautiful.ai</div><div class="ccat">Smart Presentations</div></div></div><div class="badges"><span class="b bfm">Freemium</span></div><div class="cdesc">Slides banao — AI khud design theek karta rehta hai. Koi design skill nahi chahiye. Business presentations ke liye sabse clean aur professional output.</div><div class="cfoot"><div class="rating">⭐ 4.4 <span>(verified)</span></div><a href="https://beautiful.ai" target="_blank" class="visit">Visit →</a></div></div>
+    <div class="card" data-cat="productivity" data-price="freemium" data-q="beautiful ai slides deck presentation free simple"><div class="ctop"><div class="cicon" style="background:rgba(108,99,255,0.1)">🗂️</div><div><div class="cname">Beautiful.ai</div><div class="ccat">Smart Presentations</div></div></div><div class="badges"><span class="b bfm">Freemium</span></div><div class="cdesc">Slides banao — AI khud design theek karta rehta hai. Koi design skill nahi chahiye. Business presentations ke liye sabse clean output.</div><div class="cfoot"><div class="rating">⭐ 4.4 <span>(verified)</span></div><a href="https://beautiful.ai" target="_blank" class="visit">Visit →</a></div></div>
   </div>
   <div class="nores" id="noRes">Koi tool nahi mila — dusra keyword try karo 🔍</div>
 </div>
 
+<!-- TOOL SUBMIT FORM -->
+<div class="wrap" id="submit">
+  <div class="submit-section">
+    <div class="submit-title">🚀 Apna Tool Submit Karo</div>
+    <p class="submit-sub">Koi achha AI tool dhundha jo hamare directory mein nahi hai? Submit karo — hum review karke add kar denge. Bilkul free!</p>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Tool ka Naam *</label>
+        <input type="text" id="toolName" placeholder="jaise: Midjourney, Jasper AI">
+      </div>
+      <div class="form-group">
+        <label>Tool ki Website *</label>
+        <input type="url" id="toolUrl" placeholder="https://toolname.com">
+      </div>
+      <div class="form-group">
+        <label>Category *</label>
+        <select id="toolCat">
+          <option value="">Category chunlo</option>
+          <option>Writing</option>
+          <option>Design</option>
+          <option>Coding</option>
+          <option>Video</option>
+          <option>Audio</option>
+          <option>Marketing</option>
+          <option>Education</option>
+          <option>Productivity</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Pricing</label>
+        <select id="toolPrice">
+          <option value="">Select karo</option>
+          <option>Free</option>
+          <option>Freemium</option>
+          <option>Paid</option>
+        </select>
+      </div>
+      <div class="form-group full">
+        <label>Tool ke baare mein batao (Hindi mein) *</label>
+        <textarea id="toolDesc" placeholder="Yeh tool kya karta hai? Kisके liye useful hai? Kya special feature hai?"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Tumhara Email (optional)</label>
+        <input type="email" id="submitterEmail" placeholder="tumhara@email.com">
+      </div>
+    </div>
+    <button class="btn-submit" onclick="submitTool()">Tool Submit Karo 🚀</button>
+    <div class="submit-success" id="submitSuccess">
+      ✅ Shukriya! Tumhara tool receive ho gaya. Hum 2-3 din mein review karke add kar denge!
+    </div>
+  </div>
+</div>
+
 <!-- ABOUT -->
-<div class="wrap" id="about" style="padding-top:20px">
+<div class="wrap" id="about">
   <div class="about">
     <div>
       <div class="about-title">ToolsWala ke baare mein</div>
@@ -316,6 +448,20 @@ function subscribe(){
   if(!e||!e.includes('@')){alert('Sahi email daalo!');return;}
   document.getElementById('subMsg').style.display='block';
   document.getElementById('emailInp').value='';
+}
+function submitTool(){
+  const name=document.getElementById('toolName').value;
+  const url=document.getElementById('toolUrl').value;
+  const cat=document.getElementById('toolCat').value;
+  const desc=document.getElementById('toolDesc').value;
+  if(!name||!url||!cat||!desc){alert('Sab zaroori fields bharo!');return;}
+  document.getElementById('submitSuccess').style.display='block';
+  document.getElementById('toolName').value='';
+  document.getElementById('toolUrl').value='';
+  document.getElementById('toolCat').value='';
+  document.getElementById('toolPrice').value='';
+  document.getElementById('toolDesc').value='';
+  document.getElementById('submitterEmail').value='';
 }
 </script>
 </body>
